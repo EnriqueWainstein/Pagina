@@ -23,7 +23,7 @@ async function getCachedImage(url) {
   try {
     let finalUrl = url;
     if (url.startsWith('/')) {
-      finalUrl = `${process.env.BASE_URL || 'http://localhost:4000'}${url}`;
+      finalUrl = `${process.env.BASE_URL || 'https://le-garage-chic.onrender.com'}${url}`;
     }
 
     const hash = crypto.createHash('md5').update(finalUrl).digest('hex');
@@ -110,7 +110,7 @@ const crearVenta = async (req, res) => {
     if (!fs.existsSync(pdfDir)) fs.mkdirSync(pdfDir, { recursive: true });
 
     const pdfPath = path.join(pdfDir, `venta_${nuevaVenta._id}.pdf`);
-    const pdfURL = `${process.env.BASE_URL || 'http://localhost:4000'}/pdfs/venta_${nuevaVenta._id}.pdf`;
+    const pdfURL = `${process.env.BASE_URL || 'https://le-garage-chic.onrender.com'}/pdfs/venta_${nuevaVenta._id}.pdf`;
 
     // 🔹 Usar placeholder si falla la descarga
     const imagenesCacheadas = await Promise.all(

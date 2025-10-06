@@ -25,7 +25,7 @@ conectarBD();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: 'http://localhost:4000',
+    origin: 'https://le-garage-chic.onrender.com',
     credentials: true
   })
 );
