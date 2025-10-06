@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;       /* siempre ocupa toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../placeholder.png");
+  background-repeat: repeat;   /* mosaico */
+  background-size: 200px;      /* tamaño de cada repetición */
+  opacity: 0.2;                /* transparencia (0 = invisible, 1 = sólido) */
+  z-index: -1;                 /* queda detrás de todo */
+}
+
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #97ac74;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #e0f2f1;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+#paginaAdmin {
+  display: none;
+  padding: 2rem;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#botonAdmin1 {
+  display: none;
+}
+#botonVenta {
+  display: none;
+}
+
+#logout {
+  display: none;
+}
+
+.main-footer {
+  background-color: #97ac74;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-links {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #67e8e2;
+}
+
+.contacto a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contacto a:hover {
+  color: #e0f2f1;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.main-footer {
+  background-color: #97ac74;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 14px;
+}
+/* ... lo que ya tenías ... */
+
+#idPerfil {
+  display: none;
+}
+
+.btn-login-alt {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #97ac74;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-login-alt:hover {
+  background: #7f925f;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.producto {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.producto h3 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.imagen-container {
+  width: 100%;
+  height: 180px; /* altura fija */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* evita que se desborde */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.imagen-modelo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* mantiene proporción sin recortar */
+}
+.texto-aviso {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  color: #1d1d29;
+  font-weight: 500;
+}
+

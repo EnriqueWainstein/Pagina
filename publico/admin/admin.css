@@ -1,0 +1,98 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.botonera {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 14px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.outputBox {
+  background: #fff;
+  padding: 12px;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.usuarioCard {
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.usuarioCard:hover {
+  transform: scale(1.01);
+}
+
+.u-nombre, .u-email, .u-rol {
+  margin: 6px 0;
+}
+
+.u-actions {
+  margin-top: 10px;
+}
+
+.u-actions button {
+  background-color: #e7e7e7;
+  color: #333;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.u-actions button:hover {
+  background-color: #d0d0d0;
+}
+
+/* Estilos por rol */
+.role-admin {
+  border-left: 5px solid #d9534f;
+  background: #fff5f5;
+}
+
+.role-usuario {
+  border-left: 5px solid #5bc0de;
+  background: #f5faff;
+}
+
+.role-vendedor {
+  border-left: 5px solid #5cb85c;
+  background: #f5fff5;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}

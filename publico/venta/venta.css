@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+ 
+
+  display: flex;
+  flex-direction: column; /* orden vertical */
+}
+
+body::before {
+  content: "";
+  position: fixed;       /* siempre ocupa toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../placeholder.png");
+  background-repeat: repeat;   /* mosaico */
+  background-size: 200px;      /* tamaño de cada repetición */
+  opacity: 0.2;                /* transparencia (0 = invisible, 1 = sólido) */
+  z-index: -1;                 /* queda detrás de todo */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#tableBody.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.modelo-card-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.modelo-card-grid:hover {
+  transform: translateY(-5px);
+}
+
+.modelo-img-grid {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.cantidad-input {
+  width: 50px;
+  text-align: center;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.acciones button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.acciones .carrito-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.acciones .carrito-btn:hover {
+  background-color: #218838;
+}
+/* Carrito lateral */
+/* Carrito flotante */
+.carrito {
+  position: fixed;
+  bottom: 90px; /* queda arriba del botón 🛒 */
+  right: 20px;
+  width: 320px;
+  max-height: 70vh;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  padding: 20px;
+  display: none; /* oculto por defecto */
+  flex-direction: column;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.carrito.abierto {
+  display: flex; /* 👈 solo se muestra cuando se abre */
+}
+
+.carrito h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#carrito-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#carrito-lista .mini-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+/* Botón flotante 🛒 */
+.abrir-carrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  z-index: 1002;
+}
+
+
+#carrito-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#carrito-lista li span {
+  margin-right: 10px;
+}
+
+.eliminar-item {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.abrir-carrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+/* mini imagen dentro del carrito */
+#carrito-lista .mini-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+/* layout de cada item del carrito */
+#carrito-lista .carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* controles de cantidad dentro del carrito */
+.carrito-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.carrito-qty button {
+  padding: 4px 8px;
+}
+.carrito-qty input {
+  width: 48px;
+  text-align: center;
+}
+.main-header {
+  background-color: #97ac74;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* o sticky si querés que se mantenga arriba */
+  top: 0;
+  left: 0;
+
+  
+}
+.main-footer {
+  background-color: #97ac74;
+  color: #fff;
+  text-align: center;
+   width: 100%;
+  padding: 2rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER */
+.main-header {
+  position: sticky;       /* 👈 Se queda arriba aunque hagas scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #97ac74;   /* verde suave como el otro */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #fff;
+  z-index: 1000;          /* asegura que quede arriba de todo */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #e0f2f1;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}

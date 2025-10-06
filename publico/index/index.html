@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="/index/index.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo">Le Garage Chic</div>
+    <nav class="nav-links">
+      <a id="loginBtn" href="../login/login.html">LogIn</a>
+      <a id="botonAdmin1" href="../admin/admin.html">Admin</a>
+      <a id="botonVenta" href="../venta/venta.html">Compra</a>
+      <a id="idPerfil" href="../perfil/perfil.html">Perfil</a>
+      <a id="logout" href="#">Cerrar sesión</a>
+    </nav>
+  </header>
+
+  <main>
+     <div id="botonLoginAlternativo" style="display:none; text-align:center; margin:2rem;">
+    <p class="texto-aviso">👉 Para comprar necesitás iniciar sesión</p>
+    <a href="../login/login.html" class="btn-login-alt">Iniciar sesión</a>
+  </div>
+         
+    <h2 style="text-align:center; margin:1.5rem 0;">🛍️ Nuestros productos</h2>
+    <div id="productos" class="productos"></div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Le Garage Chic. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/legaragechic_arg/" target="_blank">Instagram</a>
+        <a href="https://wa.me/5491176108233" target="_blank">WhatsApp</a>
+      </div>
+      <p class="contacto">¿Tenés dudas? <a href="mailto:info@ladypia.com.ar">Escribinos</a></p>
+    </div>
+  </footer>
+
+  <script src="/index/index.js" defer></script>
+</body>
+</html>

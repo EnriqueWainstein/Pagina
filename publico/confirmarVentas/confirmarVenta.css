@@ -1,0 +1,135 @@
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;       /* siempre ocupa toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../placeholder.png");
+  background-repeat: repeat;   /* mosaico */
+  background-size: 200px;      /* tamaño de cada repetición */
+  opacity: 0.2;                /* transparencia (0 = invisible, 1 = sólido) */
+  z-index: -1;                 /* queda detrás de todo */
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+#resumen-carrito {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carrito-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carrito-info {
+  flex-grow: 1;
+}
+
+.carrito-nombre {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.carrito-precio {
+  color: #000000;
+}
+
+#resumen-total {
+  font-weight: bold;
+  color: #0b0b0b;
+}
+
+#btnConfirmar {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnConfirmar:hover {
+  background-color: #547bd7;
+}
+
+.main-header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #97ac74;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #fff;
+  position: relative; /* opcional si querés fijarlo */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #e0f2f1;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}

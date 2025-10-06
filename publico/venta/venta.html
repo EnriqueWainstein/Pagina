@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Modelos</title>
+  <link rel="stylesheet" href="venta.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <!-- Header elegante -->
+  <header class="main-header">
+    <div class="logo">Le Garage Chic</div>
+    <nav class="nav-links">
+      <a href="../index/index.html">Inicio</a>
+      <a href="../perfil/perfil.html">perfil</a>
+      
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <h1 id="catalogo" style="text-align:center; margin: 2rem 0;">Catálogo de Productos</h1>
+    <div id="tableBody" class="catalogo-grid"></div>
+
+    <!-- Botón flotante para abrir el carrito -->
+    <button id="abrirCarrito" class="abrir-carrito">🛒</button>
+
+    <!-- Panel lateral del carrito -->
+    <div id="carrito" class="carrito">
+      <h2>Carrito</h2>
+      <ul id="carrito-lista"></ul>
+      <p><strong>Total:</strong> $<span id="carrito-total">0.00</span></p>
+      <button id="cerrarCarrito">Cerrar</button>
+      <button id="confirmarCompra">Confirmar</button>
+    </div>
+  </main>
+
+  <!-- Footer elegante -->
+  <footer class="main-footer" id="contacto">
+    <div class="footer-content">
+      <p>&copy; 2025 Le Garage Chic. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/legaragechic_arg/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://wa.me/5491176108233" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <p class="contacto">¿Tenés dudas? <a href="mailto:contacto@legaragechic.com">Escribinos</a></p>
+    </div>
+  </footer>
+
+  <script src="venta.js"></script>
+</body>
+</html>

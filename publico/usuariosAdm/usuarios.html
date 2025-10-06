@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="usuarios.css" />
+</head>
+<body>
+  <h2>👥 Gestión de Usuarios</h2>
+
+  <div class="botonera">
+    <button><a href="../admin/admin.html">⬅️ Volver al panel</a></button>
+    <button id="btnCargarUsuarios">🔄 Cargar Usuarios</button>
+  </div>
+
+  <div id="usuariosContainer"></div>
+  <pre id="output"></pre>
+
+  <!-- 🧩 Modal -->
+  <div id="modalEditar" class="modal">
+    <div class="modal-contenido">
+      <div class="modal-header">
+        <h3>Editar Usuario</h3>
+        <button id="cerrarModal" class="btn-cerrar">✖</button>
+      </div>
+      <form id="formEditarUsuario">
+        <input type="hidden" id="usuarioId" />
+        <label>Nombre</label>
+        <input type="text" id="editNombre" required />
+
+        <label>Email</label>
+        <input type="email" id="editEmail" required />
+
+        <label>Rol</label>
+        <select id="editRol" required>
+          <option value="usuario">Usuario</option>
+          <option value="admin">Admin</option>
+          <option value="vendedor">Vendedor</option>
+        </select>
+
+        <label>Teléfono</label>
+        <input type="text" id="editTelefono" placeholder="Ej: +54 9 11..." />
+
+        <div class="modal-botones">
+          <button type="button" id="cancelarModal" class="btn-cerrar">Cancelar</button>
+          <button type="submit" class="btn-guardar">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="usuarios.js"></script>
+</body>
+</html>

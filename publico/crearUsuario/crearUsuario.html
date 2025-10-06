@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear Usuario</title>
+  <link rel="stylesheet" href="/crearUsuario/crearUsuario.css" />
+</head>
+<body>
+  <div id="mensaje" class="mensaje"></div>
+
+  <main class="container">
+    <section class="form_area">
+      <h1 class="title">🧑‍💻 Crear Usuario</h1>
+      <form id="crearUsuarioBTN" novalidate>
+        <div class="form_group">
+          <label class="sub_title" for="nombre">👤 Nombre</label>
+          <input type="text" id="nombre" class="form_style" placeholder="Tu nombre" required />
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="email">📧 Email</label>
+          <input type="email" id="email" class="form_style" placeholder="ejemplo@correo.com" required />
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="password">🔑 Contraseña</label>
+          <input type="password" id="password" class="form_style" placeholder="••••••••" required />
+        </div>
+
+        <div class="form_group">
+          
+  <label class="sub_title" for="codigoPais">🌎 País</label>
+  <select id="codigoPais" class="form_style" required>
+    <option value="+54">🇦🇷 Argentina (+54)</option>
+    <option value="+1">🇺🇸 USA (+1)</option>
+    <option value="+34">🇪🇸 España (+34)</option>
+    <option value="+55">🇧🇷 Brasil (+55)</option>
+    <!-- Agregá más países según necesites -->
+  </select>
+</div>
+
+<div class="form_group">
+  <label class="sub_title" for="telefono">📱 Número de WhatsApp</label>
+  <input 
+    type="tel" 
+    id="telefono" 
+    class="form_style" 
+    placeholder="1134567890" 
+    pattern="\d{6,15}" 
+    required 
+  />
+  <small>Ingresa solo el número sin código de país</small>
+</div>
+
+
+        
+
+        <button type="submit" class="btn">Crear cuenta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Registro de usuarios</p>
+  </footer>
+
+  <script src="/crearUsuario/crearUsuario.js"></script>
+</body>
+</html>

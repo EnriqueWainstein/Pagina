@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Ventas</title>
+  <link rel="stylesheet" href="ventas.css" />
+</head>
+<body>
+  <h2>💰 Gestión de Ventas</h2>
+
+  <div class="botonera">
+    <button><a href="../admin/admin.html">⬅️ Volver al panel</a></button>
+    <button id="btnCargarVentas">🔄 Cargar Ventas</button>
+    <button id="btnPdfDia">📄 PDF Día</button>
+    <button id="btnPdfSemana">📄 PDF Semana</button>
+  </div>
+
+  <div id="ventasContainer"></div>
+  <pre id="output"></pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="ventas.js"></script>
+</body>
+</html>

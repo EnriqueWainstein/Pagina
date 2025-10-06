@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div id="mensaje" class="mensaje"></div>
+
+  <main class="container">
+    <section class="form_area">
+      <h1 class="title">🔐 Inicia sesión</h1>
+      <form id="loginForm" novalidate>
+        <div class="form_group">
+          <label class="sub_title" for="email">📧 Email</label>
+          <input type="email" id="email" class="form_style" placeholder="ejemplo@correo.com" required />
+        </div>
+
+        <div class="form_group">
+          <label class="sub_title" for="password">🔑 Contraseña</label>
+          <input type="password" id="password" class="form_style" placeholder="••••••••" required />
+        </div>
+
+        <button type="submit" class="btn">Ingresar</button>
+
+        <p class="registro">
+          ¿No tenés una cuenta? <a class="link" href="../crearUsuario/crearUsuario.html">Registrate</a>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Panel de acceso seguro</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>

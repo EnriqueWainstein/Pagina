@@ -1,0 +1,122 @@
+/* === Reset básico === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background: #f5f6fa;
+  color: #333;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Botonera superior === */
+.botonera {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.botonera button {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s;
+}
+
+.botonera button:hover {
+  background: #2980b9;
+  transform: scale(1.03);
+}
+
+.botonera button a {
+  color: white;
+}
+
+/* === Tabla === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: #34495e;
+  color: white;
+}
+
+thead th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+tbody tr:hover {
+  background: #ecf6ff;
+}
+
+/* === Botones de acción === */
+.btnEliminarVenta,
+.btnEditar {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btnEditar {
+  background: #27ae60;
+}
+
+.btnEliminarVenta:hover {
+  background: #c0392b;
+}
+
+.btnEditar:hover {
+  background: #1e8449;
+}
+
+/* === Contenedor de resultados === */
+#output {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+/* === Contenedor principal === */
+#ventasContainer, #usuariosContainer {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1200px;
+}

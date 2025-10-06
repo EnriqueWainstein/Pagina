@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Modelos</title>
+  <link rel="stylesheet" href="modelo.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="logo">Le Garage Chic</div>
+  <nav class="nav-links">
+    <a href="../index/index.html">inicio</a>
+    <a id="botonAdmin1" href="../miUsuario/miUsuario.html">Perfil</a>
+    <a id="logout" href="#">Cerrar sesión</a>
+  </nav>
+</header>
+
+
+  <h1>Modelos</h1>
+
+  <!-- Formulario para crear un nuevo modelo -->
+ <form id="modeloForm" enctype="multipart/form-data">
+  <label>ID:</label>
+  <input type="text" name="id" required />
+
+  <label>Nombre:</label>
+  <input type="text" name="nombre" required />
+
+  <label>Precio:</label>
+  <input type="number" name="precio" step="0.01" required />
+
+  <label>Inventario:</label>
+  <input type="number" name="inventario" required />
+
+  <label>Imagen:</label>
+  <input type="file" name="imagen" accept="image/*" required />
+
+  <button type="submit">Crear Modelo</button>
+</form>
+
+
+  <!-- Modal para editar modelo -->
+  <div id="modalEditar">
+    <div>
+      <h2>Editar Modelo</h2>
+      <form id="editarForm">
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="number" name="precio" placeholder="Precio" required step="0.01" />
+        <input type="url" name="linkImagen" placeholder="Link Imagen" />
+        <input type="number" name="inventario" placeholder="Inventario" required min="0" />
+        <button type="submit" id="Guardar">Guardar</button>
+        <button type="button" id="cerrarModal">Cancelar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Tabla de modelos -->
+  <table id="modeloTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th>Inventario</th>
+        <th>Acciones</th>
+        <th id="eliminar">eliminar</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <footer class="main-footer">
+  <div class="footer-content">
+    <p>© 2025 - Le Garage Chic</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+    </div>
+    <div class="contacto">
+      <p>Contacto: <a href="mailto:info@legaragechic.com">info@legaragechic.com</a></p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="modelo.js"></script>
+</body>
+</html>
