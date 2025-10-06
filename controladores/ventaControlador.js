@@ -6,7 +6,7 @@ const path = require('path');
 const PDFDocument = require('pdfkit');
 
 const Modelo = require('../Modelo/Modelo');
-const Venta = require('../Modelo/Venta');
+const Venta = require('../Modelo/venta');
 const { enviarPdf: enviarPdfAPI } = require('../servicioRedes/wspServicio');
 const { enviarMail } = require("../servicioRedes/correoServicio");
 
